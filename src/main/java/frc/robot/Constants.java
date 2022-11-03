@@ -12,4 +12,20 @@ package frc.robot;
  * <p>It is advised to statically import this class (or one of its inner classes) wherever the
  * constants are needed, to reduce verbosity.
  */
-public final class Constants {}
+public final class Constants {
+
+public static class CANIds {
+        public static int DriveTrainMotorLeft1  = 1;  // Left 1
+        public static int DriveTrainMotorRight1 = 3;  // Left 2
+        public static int DriveTrainMotorLeft2  = 2;  // Right 1
+        public static int DriveTrainMotorRight2 = 4;  // Right 2
+
+    }
+
+    public static class DriveTrain {
+        public static int DriveTrainMotorLeft1 = CANIds.DriveTrainMotorLeft1;
+        public static int DriveTrainMotorRight1 = CANIds.DriveTrainMotorRight1;
+        public static int DriveTrainMotorLeft2 = CANIds.DriveTrainMotorLeft2;
+        public static int DriveTrainMotorRight2 = CANIds.DriveTrainMotorRight2;
+    }
+}
