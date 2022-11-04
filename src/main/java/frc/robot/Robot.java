@@ -7,6 +7,9 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -15,6 +18,16 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
  * project.
  */
 public class Robot extends TimedRobot {
+ 
+  private final PWMSparkMax m_frontLeftModule = new PWMSparkMax(0);
+  private final PWMSparkMax m_frontRightModule = new PWMSparkMax(1);
+  private final PWMSparkMax m_backLeftModule = new PWMSparkMax(3);
+  private final PWMSparkMax m_backRightModule = new PWMSparkMax(4);
+  private final Joystick m_stick = new Joystick(0);
+  private final Timer m_timer = new Timer();
+
+  
+ 
   private Command m_autonomousCommand;
 
   private RobotContainer m_robotContainer;
