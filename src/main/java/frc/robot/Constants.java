@@ -16,9 +16,16 @@ public final class Constants {
 
 public static class CANIds {
         public static int DriveTrainMotorLeft1  = 1;  // Left 1
-        public static int DriveTrainMotorRight1 = 3;  // Left 2
-        public static int DriveTrainMotorLeft2  = 2;  // Right 1
+        public static int DriveTrainMotorRight1 = 3;  // Right 1
+        public static int DriveTrainMotorLeft2  = 2;  // Left 2
         public static int DriveTrainMotorRight2 = 4;  // Right 2
+
+        public static int kLeftDriveMotor         = 5;
+        public static int kLeftRotateMotor        = 6;
+        public static int kLeftRotateEncoder      = 7;
+        public static int kRightDriveMotor        = 8;
+        public static int kRightRotateMotor       = 9;
+        public static int kRightRotateEncoder     = 10;
 
     }
 
@@ -27,5 +34,19 @@ public static class CANIds {
         public static int DriveTrainMotorRight1 = CANIds.DriveTrainMotorRight1;
         public static int DriveTrainMotorLeft2 = CANIds.DriveTrainMotorLeft2;
         public static int DriveTrainMotorRight2 = CANIds.DriveTrainMotorRight2;
+    }
+
+    public static class Swerve{
+        //Left 
+        public static int kLeftDriveID = CANIds.kLeftDriveMotor;
+        public static int kLeftRotateID = CANIds.kLeftRotateMotor;
+        public static int kLeftEncoderID = CANIds.kLeftRotateEncoder;
+        public static int kLeftOffset = 0; // In Degrees
+
+        //Right 
+        public static int kRightDriveID = CANIds.kRightDriveMotor;
+        public static int kRightRotateID = CANIds.kRightRotateMotor;
+        public static int kRightEncoderID = CANIds.kRightRotateEncoder;
+        public static int kRightOffset = 0; // In Degrees
     }
 }
